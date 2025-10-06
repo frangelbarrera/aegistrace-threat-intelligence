@@ -107,9 +107,17 @@ Without keys, AegisTrace will still run but with limited enrichment data.
 
 ## 📊 Output
 
-- **dashboard.html** → Interactive dashboard with KPIs, charts, and tables.
-- **iocs_enriched.csv** → Export of enriched IoCs.
-- **threatintel.db** → SQLite database storing historical threats and IoCs.
+- **dashboard.html** → Interactive dashboard with KPIs, charts, and tables.  
+- **iocs_enriched.csv** → Export of enriched IoCs.  
+- **threatintel.db** → SQLite database storing historical threats and IoCs.  
+
+📸 Example of the interactive dashboard:
+
+![Dashboard Example](docs/images/Screenshot_1.png)
+
+📸 Example console output when running the setup script:
+
+![Console Setup](docs/images/Screenshot_2.png)
 
 ---
 
@@ -142,3 +150,4 @@ Contributions are welcome!
 Please fork the repository, create a feature branch, and submit a pull request.
 
 ---
+
