@@ -113,11 +113,11 @@ Without keys, AegisTrace will still run but with limited enrichment data.
 
 📸 Example of the interactive dashboard:
 
-![Dashboard Example](docs/images/Screenshot_1.png)
+![Dashboard Example](docs/images/Screenshot_1.jpg)
 
 📸 Example console output when running the setup script:
 
-![Console Setup](docs/images/Screenshot_2.png)
+![Console Setup](docs/images/Screenshot_2.jpg)
 
 ---
 
@@ -150,4 +150,5 @@ Contributions are welcome!
 Please fork the repository, create a feature branch, and submit a pull request.
 
 ---
+
 
