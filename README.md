@@ -101,7 +101,16 @@ set VIRUSTOTAL_API_KEY=your_virustotal_key
 set PULSEDIVE_API_KEY=your_pulsedive_key
 ```
 
-Without keys, AegisTrace will still run but with limited enrichment data.
+Adding API keys significantly enhances the capabilities of **AegisTrace**.  
+While the platform can operate without them, enabling these integrations unlocks deeper enrichment and more actionable intelligence:
+
+- **AbuseIPDB** → Provides IP reputation scores and geolocation, helping identify malicious hosts and their origin.  
+- **VirusTotal** → Delivers detailed malware analysis for file hashes, including detection ratios and last analysis results.  
+- **Pulsedive** → Adds contextual threat intelligence such as tags, campaigns, and activity status for domains and IPs.  
+- **OTX (AlienVault)** → Expands visibility with community-driven threat indicators and pulse-based intelligence.
+
+By supplying valid API keys, AegisTrace can transform raw IoCs into **context-rich intelligence**, improving detection accuracy, supporting incident response, and offering a more complete view of the threat landscape.
+
 
 ---
 
@@ -149,6 +158,7 @@ Contributions are welcome!
 Please fork the repository, create a feature branch, and submit a pull request.
 
 ---
+
 
 
 
