@@ -59,6 +59,15 @@ AegisTrace/
 
 ---
 
+## 🏗️ Architecture Diagram
+
+The following diagram illustrates the high-level data flow in **AegisTrace**:
+
++-------------------+ | Data Sources | |-------------------| | RSS Feeds | | URLhaus | | MalwareBazaar | | FeodoTracker | | OTX (optional) | +---------+---------+ | v +-------------------+ | Collectors | +---------+---------+ | v +-------------------+ | NLP Processor | | (entities, type, | | summaries) | +---------+---------+ | v +-------------------+ | IoC Extractor | +---------+---------+ | v +-------------------+ | IoC Enricher | | (AbuseIPDB, | | VirusTotal, | | Pulsedive, OTX) | +---------+---------+ | v +-------------------+ | Storage (DB) | | + CSV Export | +---------+---------+ | v +-------------------+ | Predictor | | (ARIMA Forecast) | +---------+---------+ | v +-------------------+ | Dashboard | | (KPIs, Charts, | | IoC Tables) | +-------------------+
+
+
+---
+
 ## ⚙️ Installation
 
 ### 1. Clone the repository
@@ -158,6 +167,7 @@ Contributions are welcome!
 Please fork the repository, create a feature branch, and submit a pull request.
 
 ---
+
 
 
 
