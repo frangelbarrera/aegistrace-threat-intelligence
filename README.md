@@ -1,4 +1,4 @@
-# 🛡️ AegisTrace
+#  AegisTrace
 
 **AegisTrace** is an advanced **Cyber Threat Intelligence (CTI) platform** built to collect, process, enrich, and visualize threat data from multiple open sources.  
 It automatically extracts **Indicators of Compromise (IoCs)** such as IP addresses, domains, and file hashes, enriches them with external intelligence feeds, and transforms raw data into **actionable insights** through an interactive dashboard.
@@ -14,7 +14,7 @@ Whether used for **incident response, SOC operations, red team analysis, or acad
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
 - **Multi-Source Threat Collection**
   - Public RSS feeds from leading cybersecurity news outlets.
@@ -48,7 +48,7 @@ Whether used for **incident response, SOC operations, red team analysis, or acad
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 AegisTrace/
@@ -68,7 +68,7 @@ AegisTrace/
 
 ---
 
-## 🏗️ Architecture Diagram
+##  Architecture Diagram
 
 The following diagram illustrates the high-level data flow in **AegisTrace**:
 
@@ -77,7 +77,7 @@ The following diagram illustrates the high-level data flow in **AegisTrace**:
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 ### 1. Clone the repository
 ```bash
@@ -108,7 +108,7 @@ python main.py
 
 ---
 
-## 🔑 Optional API Keys
+##  Optional API Keys
 
 To enable full IoC enrichment, set the following environment variables before running:
 
@@ -132,7 +132,7 @@ By supplying valid API keys, AegisTrace can transform raw IoCs into **context-ri
 
 ---
 
-## 📊 Output
+##  Output
 
 📸 Example console output when running the setup script:
 
@@ -147,7 +147,7 @@ By supplying valid API keys, AegisTrace can transform raw IoCs into **context-ri
 ![Console Setup](docs/images/Screenshot_3.jpg)
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 - **Python 3.9+**
 - **spaCy** – NLP entity extraction and text processing.
@@ -159,7 +159,7 @@ By supplying valid API keys, AegisTrace can transform raw IoCs into **context-ri
 
 ---
 
-## 📌 Roadmap
+##  Roadmap
 
 - [ ] Add MITRE ATT&CK mapping for detected threats.
 - [ ] Integrate additional CTI feeds (CIRCL, MISP).
@@ -170,16 +170,17 @@ By supplying valid API keys, AegisTrace can transform raw IoCs into **context-ri
 ---
 
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome!  
 Please fork the repository, create a feature branch, and submit a pull request.
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 
 
