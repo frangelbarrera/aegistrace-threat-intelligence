@@ -38,9 +38,7 @@ jobs:
           pip install -e .
 
       - name: Download spaCy model
-       run: |
-         python -m spacy download en_core_web_sm --quiet || \
-         python -m spacy download en_core_web_sm --quiet
+        run: python -m spacy download en_core_web_sm
 
       - name: Lint with ruff
         run: ruff check aegistrace tests
