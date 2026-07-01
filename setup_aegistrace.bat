@@ -1,7 +1,7 @@
 @echo off
-title AegisTrace Setup & Run
+title AegisTrace Setup ^& Run
 echo ============================================
-echo   🛡️  AegisTrace - Threat Intelligence Tool
+echo   AegisTrace - Threat Intelligence Tool
 echo ============================================
 echo.
 
@@ -20,19 +20,23 @@ REM 3. Upgrade pip to the latest version
 echo [*] Upgrading pip...
 python -m pip install --upgrade pip
 
-REM 4. Install dependencies from requirements.txt
+REM 4. Install runtime dependencies
 echo [*] Installing dependencies...
 pip install -r requirements.txt
 
-REM 5. Download spaCy English model
+REM 5. Install the aegistrace package in editable mode
+echo [*] Installing aegistrace package...
+pip install -e .
+
+REM 6. Download spaCy English model
 echo [*] Downloading spaCy English model...
 python -m spacy download en_core_web_sm
 
-REM 6. Run AegisTrace
+REM 7. Run AegisTrace
 echo [*] Running AegisTrace...
-python main.py
+python -m aegistrace
 
-REM 7. Open dashboard in default browser if it exists
+REM 8. Open dashboard in default browser if it exists
 if exist dashboard.html (
     echo [*] Opening dashboard in browser...
     start dashboard.html
@@ -42,6 +46,6 @@ if exist dashboard.html (
 
 echo.
 echo ============================================
-echo   ✅ Process completed
+echo   Process completed
 echo ============================================
 pause

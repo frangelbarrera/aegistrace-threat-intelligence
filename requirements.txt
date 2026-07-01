@@ -1,5 +1,8 @@
-requests
-pandas
-spacy
-statsmodels
-plotly
+# Runtime dependencies for AegisTrace.
+# Versions are intentionally permissive (>=) but anchored to known-good
+# releases so fresh installs get recent, patched versions.
+requests>=2.31.0
+pandas>=2.0.0
+spacy>=3.7.0
+statsmodels>=0.14.0
+plotly>=5.18.0

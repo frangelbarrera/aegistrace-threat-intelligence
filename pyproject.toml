@@ -1,0 +1,126 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aegistrace-threat-intelligence"
+version = "0.2.0"
+description = "Modular Cyber Threat Intelligence pipeline: collect, NLP, IoC extraction, enrichment, ARIMA forecasting."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Frangel Barrera", email = "frangelbarrera@users.noreply.github.com" },
+]
+keywords = [
+    "cyber-threat-intelligence",
+    "cti",
+    "ioc",
+    "threat-intelligence",
+    "arima",
+    "security",
+    "osint",
+    "spacy",
+    "plotly",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Internet :: Log Analysis",
+    "Typing :: Typed",
+]
+dependencies = [
+    "requests>=2.31.0",
+    "pandas>=2.0.0",
+    "spacy>=3.7.0",
+    "statsmodels>=0.14.0",
+    "plotly>=5.18.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "responses>=0.25.0",
+    "ruff>=0.5.0",
+    "mypy>=1.8.0",
+    "types-requests>=2.31.0",
+]
+
+[project.scripts]
+aegistrace = "aegistrace.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/frangelbarrera/aegistrace-threat-intelligence"
+Repository = "https://github.com/frangelbarrera/aegistrace-threat-intelligence"
+Issues = "https://github.com/frangelbarrera/aegistrace-threat-intelligence/issues"
+
+[tool.setuptools]
+packages = ["aegistrace"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::PendingDeprecationWarning",
+]
+
+[tool.coverage.run]
+source = ["aegistrace"]
+omit = ["*/__main__.py", "*/tests/*"]
+
+[tool.coverage.report]
+fail_under = 80
+show_missing = true
+exclude_lines = [
+    "pragma: no cover",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+extend-exclude = ["docs", "build", "dist"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "UP",  # pyupgrade
+    "C4",  # flake8-comprehensions
+    "SIM", # flake8-simplify
+]
+ignore = [
+    "E501",  # line too long (handled by formatter)
+    "B008",  # function call in default argument (used for argparse)
+    "B904",  # raise from in exceptions (too noisy for this codebase)
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["B011"]  # allow assert False in tests
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = false
+warn_unused_configs = true
+ignore_missing_imports = true
+exclude = ["build/", "dist/"]
