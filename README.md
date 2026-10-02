@@ -257,3 +257,7 @@ Planned (no promises, no dates):
 ## License
 
 MIT - see [LICENSE](LICENSE).
+
+## IoC data model
+
+See [docs/ioc-data-model.md](docs/ioc-data-model.md).
