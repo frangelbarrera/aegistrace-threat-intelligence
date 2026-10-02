@@ -1,5 +1,14 @@
-# IoC data model and provenance
+**Maintainer:** Frangel Raúl Crespo Barrera
+**Last verified:** 2026-10-02
+**Scope:** IoC collection, provenance, freshness, deduplication, schemas, feeds, and report output.
 
-Document the source, collection time, freshness, deduplication key, confidence, and schema of each indicator. API keys must come from environment configuration and must never appear in logs, fixtures, reports, or committed files.
+| Field | Current record |
+|---|---|
+| Status | Tests and CI exist; feed compatibility must be stated per implemented operation. |
+| Evidence | `aegistrace/`, `tests/test_collectors.py`, `tests/test_storage.py`, `tests/test_config_and_package.py`, `pyproject.toml`, `.github/workflows/ci.yml`. |
+| Standard | STIX/TAXII is not claimed beyond formats and operations implemented by the current code. |
+| Verification | `pytest -q`; inspect collector fixtures and schema validation before changing feeds. |
+| Owner | Repository owner. |
+| Limitations | External feed data is untrusted and may be stale, malformed, duplicated, or withdrawn. |
 
-STIX/TAXII compatibility should be stated only for formats and operations actually implemented. External feed data is untrusted input and must be validated and escaped before storage or display.
+Record source, collection time, freshness, deduplication key, confidence, and schema for each indicator. API keys come from environment configuration and must not appear in logs or fixtures.
